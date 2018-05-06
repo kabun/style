@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8"/>
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<meta name="format-detection" content="telephone=no">
+  	<title>Portfolio</title>
+    <link href="./mincss/style.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/solarized_dark.min.css">
+  </head>
+  <body>
+    <header id="header" class="header-wrapper">
+      <h1>Patterns</h1>
+      <nav id="global-nav" class="global-nav" role="navigation">
+        <ul class="global-nav__wrapper clearfix">
+          <li class="global-nav__item active">Styles</li>
+          <li class="global-nav__item">レスポンシブ</li>
+          <li class="global-nav__item">IE対策</li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="contents clearfix">
+      <nav id="sub-nav" class="sub-nav " role="navigation">
+        <ul class="sub-nav__wrapper">
+          <li class="sub-nav__item"><a href="#colors" class="link-btn">Colors</a></li>
+          <li class="sub-nav__item"><a href="#fonts" class="link-btn">Fonts</a></li>
+          <li class="sub-nav__item"><a href="#header-title" class="link-btn">Header-Title</a></li>
+          <li class="sub-nav__item"><a href="#table" class="link-btn">Table</a></li>
+        </ul>
+      </nav>
+
+    	<div id="main" class="main" role="main">
+        <div class="main-wrapper">
+          <section id="colors" class="section-wrapper">
+          	<h2 class="section-title">
+          		colors
+          	</h2>
+            <div class="section-description">
+              <ul class="colors-list clearfix">
+                <li class="colors-list__item">
+                  <div class="colors-main" style="background-color: #56b995;"></div>
+                  <div class="colors-name">#56b995</div>
+                </li>
+                <li class="colors-list__item">
+                  <div class="colors-main" style="background-color: #5678b9;"></div>
+                  <div class="colors-name">#5678b9</div>
+                </li>
+                <li class="colors-list__item">
+                  <div class="colors-main" style="background-color: #b9af56;"></div>
+                  <div class="colors-name">#b9af56</div>
+                </li>
+                <li class="colors-list__item">
+                  <div class="colors-main" style="background-color: #7956b9;"></div>
+                  <div class="colors-name">#7956b9</div>
+                </li>
+                <li class="colors-list__item">
+                  <div class="colors-main" style="background-color: #b9568b;"></div>
+                  <div class="colors-name">#b9568b</div>
+                </li>
+                <li class="colors-list__item">
+                  <div class="colors-main" style="background-color: #b95656;"></div>
+                  <div class="colors-name">#b95656</div>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="fonts" class="section-wrapper">
+          	<h2 class="section-title">
+          		Fonts
+          	</h2>
+            <div class="section-description">
+              <div class="section-subwrapper">
+                <h3 class="section-subtitle" style="font-family: Georgia,游明朝,'Yu Mincho',YuMincho,'Hiragino Mincho ProN',HGS明朝E,メイリオ,Meiryo,serif;">明朝体</h3>
+                <div class="section-description" style="font-family: Georgia,游明朝,'Yu Mincho',YuMincho,'Hiragino Mincho ProN',HGS明朝E,メイリオ,Meiryo,serif;">
+                  Georgia,游明朝,'Yu Mincho',YuMincho,'Hiragino Mincho ProN',HGS明朝E,メイリオ,Meiryo,serif
+                </div>
+                <h3 class="section-subtitle" style="font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue','游ゴシック Medium',YuGothic,YuGothicM,'Hiragino Kaku Gothic ProN',メイリオ,Meiryo,sans-serif;">ゴシック体</h3>
+                <div class="section-description" style="font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue','游ゴシック Medium',YuGothic,YuGothicM,'Hiragino Kaku Gothic ProN',メイリオ,Meiryo,sans-serif;">
+                  -apple-system,BlinkMacSystemFont,'Helvetica Neue",'游ゴシック Medium',YuGothic,YuGothicM,'Hiragino Kaku Gothic ProN',メイリオ,Meiryo,sans-serif
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="header-title" class="section-wrapper">
+          	<h2 class="section-title">
+          		Header-Title
+          	</h2>
+            <div class="section-description">
+                <ul class="section-subwrapper">
+                  <li><h1>H1 Header-Title</h1></li>
+                  <li><h2>H2 Header-Title</h2></li>
+                  <li><h2 class="section-title">H2.header-subtitle</h2></li>
+                  <li><h3>H3 Heade-Titler</h3></li>
+                  <li><h3 class="section-subtitle">H3.section-title</h3></li>
+                  <li><h4>H4 Header-Title</h4></li>
+                  <li><h5>H5 Header-Title</h5></li>
+                  <li><h6>H6 Header-Title</h6></li>
+                  <li></li>
+                </ul>
+            </div>
+          </section>
+
+
+          <section id="table" class="section-wrapper">
+          	<h2 class="section-title">
+          		table
+          	</h2>
+            <div class="section-description">
+             <pre>
+               <code>
+&lt;section id="fonts" class="section-wrapper fonts"&gt;
+&#9;&lt;h2 class="section-title"&gt;
+&#9;&#9;grid
+&#9;&lt;/h2&gt;
+  &lt;div class="section-description"&gt;
+    &lt;div class="fonts-wrapper"&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+              </code>
+             </pre>
+            </div>
+          </section>
+        </div>
+    	</div>
+  	</div>
+
+
+
+
+  	<script src="./minjs/jquery-3.2.1.min.js"></script>
+  	<script src="./minjs/common.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
