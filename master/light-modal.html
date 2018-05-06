@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8"/>
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<meta name="format-detection" content="telephone=no">
+  	<title>Portfolio</title>
+  	<link href="./mincss/reset.min.css" rel="stylesheet" type="text/css">
+    <link href="./mincss/common.min.css" rel="stylesheet" type="text/css">
+    <link href="./mincss/modal.min.css" rel="stylesheet" type="text/css">
+    <link href="./mincss/lights.min.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+  	<div class="contents">
+  		<header id="header" class="wrapper-area header-wrapper">
+  			<div class="header-lights-area">
+  				<span class="header-lights"></span>
+  			</div>
+  			<nav id="global-nav" class="global-nav-wrapper" role="navigation">
+  				<ul class="gnav clearfix">
+  					<li class="gnav__item font-accent">
+  						<a href="#topimage" class="tap-link-btn">
+  							<img src="./img/light-modal/icon-moon.png" alt="" width="40" height="40">#
+  						</a>
+  					</li>
+  					<li class="gnav__item font-accent"><a href="#profile" class="tap-link-btn">テスト</a></li>
+  				</ul>
+  			</nav>
+  			<section id="topimage" class="section-wrapper topimage-wrapper">
+  				<h1 class="site-title">
+  					<div class="site-title__txt main-title font-accent">テスト</div>
+  					<div class="site-title__txt sub-title font-accent"></div>
+  				</h1>
+  			</section>
+  		</header>
+  		<main id="main" class="wrapper-area main-wrapper">
+  			<!-- profile -->
+  			<section id="profile" class="section-wrapper profile-wrapper">
+  				<h2 class="section-title">
+  					<div class="section-title__txt font-accent">テスト</div>
+  				</h2>
+  				<ul class="clearfix">
+  					<li class="section-inner">
+  						<div class="section-content">
+  							<div class="section-img">
+  								<img src="./img/light-modal/profile-1.png" alt="" width="300" height="300">
+  							</div>
+  							<div class="section-txt">
+  								<div class="section-txt__title font-accent">テスト</div>
+  								<div class="section-txt__sub-title">使用できる言語</div>
+  								<div class="section-txt__sub-caption">HTML、CSS、JavaScript</div>
+  								<div class="section-txt__sub-title">最近興味のある言語（フレームワークなど）</div>
+  								<div class="section-txt__sub-caption">ES6（Vue+Babel+TS）、PHP(Wordpress)、
+  								Node.js</div>
+  								<div class="section-txt__sub-title">使用できるアプリケーション</div>
+  								<div class="section-txt__sub-caption">Photoshop、Illustrator、Lightroom、Clip Studio、など</div>
+  								<div class="section-txt__sub-title">実務で使用したWEBツール､フレームワーク</div>
+  								<div class="section-txt__sub-caption">Git、SASS、Grunt、Webpack、Backbone(underscore)、Zepto（jQuery）、CMS（Movabletype）、など</div>
+  								<div class="section-txt__sub-caption">
+  									<ul class="section-txt__sample-list">
+  										<li class="section-txt__sample-thum-item" data-openmodal="modal-overlay-like1">
+  											<img src="./img/light-modal/illust-thum-1.png" alt="" width="100%" height="100%">
+  										</li>
+  										<li class="section-txt__sample-thum-item" data-openmodal="modal-overlay-like2">
+  											<img src="./img/light-modal/photo-thum-1.png" alt="" width="100%" height="100%">
+  										</li>
+  										<li class="section-txt__sample-thum-item" data-openmodal="modal-overlay-like3">
+  											<img src="./img/light-modal/skate-thum-1.png" alt="" width="100%" height="100%">
+  										</li>
+  									</ul>
+  								</div>
+  							</div>
+  						</div>
+  					</li>
+  				</ul>
+  			</section>
+  		</main>
+  	</div>
+
+  	<!-- modal profile -->
+  	<div id="modal-overlay-like1" class="modal-overlay modal-overlay-like">
+  		<div class="modal_bg_area modal-close" data-closemodal="modal-overlay-like1"></div>
+  		<div class="modal-inner profile-inner">
+  			<div class="button-link close-mark modal-close" data-closemodal="modal-overlay-like1">閉じる</div>
+  			<section class="section-modal-wrapper work-modal-wrapper">
+  				<h2 class="section-title">
+  					<div class="section-title__txt font-accent">趣味・特技１</div>
+  				</h2>
+  				<ul class="clearfix">
+  					<li class="section-inner">
+  						<div class="section-content single">
+  							<div class="section-txt">
+  								<h3 class="section-txt__title font-accent">イラスト</h3>
+  								<p class="section-txt__sub-caption"></p>
+  							</div>
+  							<div class="section-img">
+  								<img src="./img/light-modal/illust-1.png" alt="" width="100%" height="100%">
+  							</div>
+  						</div>
+  						<div class="button-link close-button modal-close" data-closemodal="modal-overlay-like1">閉じる</div>
+  					</li>
+  				</ul>
+  			</section>
+  		</div>
+  	</div>
+  	<div id="modal-overlay-like2" class="modal-overlay modal-overlay-like">
+  		<div class="modal_bg_area modal-close" data-closemodal="modal-overlay-like2"></div>
+  		<div class="modal-inner profile-inner">
+  			<div class="button-link close-mark modal-close" data-closemodal="modal-overlay-like2">閉じる</div>
+  			<section class="section-modal-wrapper work-modal-wrapper">
+  				<h2 class="section-title">
+  					<div class="section-title__txt font-accent">趣味・特技２</div>
+  				</h2>
+  				<ul class="clearfix">
+  					<li class="section-inner">
+  						<div class="section-content single">
+  							<div class="section-txt">
+  								<h3 class="section-txt__title font-accent">ポートレート撮影</h3>
+  							</div>
+  							<div class="section-img">
+  								<img src="./img/light-modal/photo-1.png" alt="" width="100%" height="100%">
+  							</div>
+  						</div>
+  						<div class="button-link close-button modal-close" data-closemodal="modal-overlay-like2">閉じる</div>
+  					</li>
+  				</ul>
+  			</section>
+  		</div>
+  	</div>
+  	<div id="modal-overlay-like3" class="modal-overlay modal-overlay-like">
+  		<div class="modal_bg_area modal-close" data-closemodal="modal-overlay-skate1"></div>
+  		<div class="modal-inner profile-inner">
+  			<div class="button-link close-mark modal-close" data-closemodal="modal-overlay-like3">閉じる</div>
+  			<section class="section-modal-wrapper work-modal-wrapper">
+  				<h2 class="section-title">
+  					<div class="section-title__txt font-accent">趣味・特技３</div>
+  				</h2>
+  				<ul class="clearfix">
+  					<li class="section-inner">
+  						<div class="section-content single">
+  							<div class="section-txt">
+  								<h3 class="section-txt__title font-accent">アイススケート、インラインスケート</h3>
+  								<p class="section-txt__sub-caption"></p>
+  							</div>
+  							<div class="section-img">
+  								<img src="./img/light-modal/skate-1.png" alt="" width="100%" height="100%">
+  							</div>
+  						</div>
+  						<div class="button-link close-button modal-close" data-closemodal="modal-overlay-like3">閉じる</div>
+  					</li>
+  				</ul>
+  			</section>
+  		</div>
+  	</div>
+
+
+
+  	<script src="./minjs/jquery-3.2.1.min.js"></script>
+  	<script src="./minjs/common.min.js"></script>
+  	<script src="./minjs/modal.min.js"></script>
+  	<script src="./minjs/lights.min.js"></script>
+
+  </body>
+</html>

@@ -1,7 +1,5 @@
 $(function(){
   // 初期化
-
-
   // ページ内リンクスクロール
   $("a[href^='#']").click(function() {
      var speed = 200;
@@ -11,9 +9,5 @@ $(function(){
      $('body,html').animate({scrollTop:position}, speed, 'swing');
      return false;
   });
-
-
-
-
 
 });
