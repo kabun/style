@@ -33,15 +33,53 @@ pre {
   margin-bottom: 0;
 }
 
+html, body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, table, th, td {
+  margin: 0;
+  padding: 0;
+  line-height: 1.0;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+}
+
+img, input {
+  vertical-align: bottom;
+}
+
+pre {
+  margin-top: -10px;
+  margin-bottom: 0;
+}
+
 html {
   font-size: calc(4 * ((100vw - 320px) / 1600) + 14px);
 }
 
 body {
-  /* IE8 IE9 */
   color: #484848;
   background-color: #fff;
   -webkit-text-size-adjust: 100%;
+}
+
+a {
+  color: #619a8b;
 }
 
 header {
@@ -53,11 +91,12 @@ header {
   border-bottom: 2px solid #95c1b5;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  z-index: 100;
 }
-header .header-wrapper {
+header .header__wrapper {
   position: relative;
 }
-header h1 {
+header .header__h1-logo {
   position: absolute;
   top: 50%;
   left: 0;
@@ -74,12 +113,8 @@ header .global-nav {
 }
 header .global-nav .global-nav__item {
   float: left;
-  padding-left: 16px;
-  padding-right: 16px;
   margin-left: 5px;
   margin-right: 5px;
-  height: 40px;
-  line-height: 40px;
   border: 1px solid #619a8b;
   border-radius: 10px;
   -webkit-box-sizing: border-box;
@@ -87,25 +122,55 @@ header .global-nav .global-nav__item {
   background-color: #fff;
   color: #72aa9a;
 }
-header .global-nav .global-nav__item.active {
+header .global-nav .global-nav__item.current {
   background-color: #619a8b;
+}
+header .global-nav .global-nav__item.current .global-nav__link-btn {
   color: #fff;
+  cursor: default;
+}
+header .global-nav .global-nav__item .global-nav__link-btn {
+  padding-left: 16px;
+  padding-right: 16px;
+  height: 40px;
+  line-height: 40px;
+  display: block;
 }
 
 .contents {
-  padding: 46px 10px;
+  position: relative;
   width: 100%;
   overflow: hidden;
-  padding: 32px 16px;
+  padding: 108px 16px 32px;
+}
+
+.sub-nav__switch {
+  position: fixed;
+  box-sizing: border-box;
+  overflow: hidden;
+  top: 65px;
+  left: 0;
+  background-color: #619a8b;
+  color: #fff;
+  padding: 4px;
+  width: 6em;
+  border-radius: 0 0 8px 0;
+}
+.sub-nav__switch.none-sub-nav {
+  width: 2em;
+  text-align: center;
+  opacity: 0.5;
 }
 
 .sub-nav {
   position: fixed;
   box-sizing: border-box;
   overflow: hidden;
-  top: 84px;
+  top: 100px;
   left: 16px;
-  width: 150px;
+}
+.sub-nav.none-sub-nav {
+  display: none;
 }
 .sub-nav .sub-nav__item {
   position: relative;
@@ -136,11 +201,51 @@ header .global-nav .global-nav__item.active {
   overflow: hidden;
   box-sizing: border-box;
   width: 100%;
-  margin-top: 60px;
-  margin-left: -150px;
+  padding-left: 150px;
 }
-#main .main-wrapper {
-  margin-left: 180px;
+#main.none-sub-nav {
+  padding-left: 0;
+}
+#main .section-wrapper {
+  margin-bottom: 40px;
+}
+#main .section-title {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+#main .section-sub-title {
+  margin-bottom: 8px;
+}
+#main .section-subwrapper {
+  background-color: #f1f7f6;
+  padding: 20px;
+}
+#main .section-name {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+#main .section-description {
+  margin-bottom: 25px;
+}
+#main .section-subtitle {
+  color: #1c654a;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+#main .section-description {
+  word-break: break-all;
+  margin-bottom: 24px;
+}
+
+#main {
+  float: right;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 150px;
+}
+#main.none-sub-nav {
+  padding-left: 0;
 }
 #main .section-wrapper {
   margin-bottom: 40px;
@@ -194,7 +299,7 @@ header .global-nav .global-nav__item.active {
 
 a {
   -webkit-tap-highlight-color: transparent;
-  color: #10493a;
+  color: #619a8b;
 }
 
 .font-small {
@@ -228,9 +333,120 @@ a {
   clear: both;
 }
 
+pre {
+  font-size: 0.8rem;
+}
 pre html {
   font-size: 10px;
 }
 
-/* min */
-/* max */
+#table {
+  /*----------------------------------------------------
+    .demo01
+  ----------------------------------------------------*/
+  /*----------------------------------------------------
+    .demo02
+  ----------------------------------------------------*/
+  /*----------------------------------------------------
+   .demo03
+  ----------------------------------------------------*/
+}
+#table table {
+  width: 100%;
+}
+#table th, #table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+#table th {
+  background: #f4f4f4;
+}
+#table .demo01 th {
+  width: 30%;
+  text-align: left;
+}
+@media only screen and (max-width: 480px) {
+  #table .demo01 {
+    margin: 0 -10px;
+  }
+  #table .demo01 th,
+  #table .demo01 td {
+    width: 100%;
+    display: block;
+    border-top: none;
+  }
+  #table .demo01 tr:first-child th {
+    border-top: 1px solid #ddd;
+  }
+}
+#table .demo02 th {
+  width: 13%;
+}
+#table .demo02 td {
+  text-align: center;
+}
+#table .demo02 td:first-child {
+  text-align: left;
+}
+@media only screen and (max-width: 800px) {
+  #table .demo02 {
+    display: block;
+    width: 100%;
+    margin: 0 -10px;
+  }
+  #table .demo02 thead {
+    display: block;
+    float: left;
+    overflow-x: scroll;
+  }
+  #table .demo02 tbody {
+    display: block;
+    width: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  #table .demo02 th {
+    display: block;
+    width: auto;
+  }
+  #table .demo02 tbody tr {
+    display: inline-block;
+    margin: 0 -3px;
+  }
+  #table .demo02 td {
+    display: block;
+  }
+}
+#table table {
+  width: 100%;
+}
+#table th, #table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+#table th {
+  background: #f4f4f4;
+}
+#table .demo03 th, #table .demo03 td {
+  width: 20%;
+  text-align: left;
+}
+@media only screen and (max-width: 480px) {
+  #table .demo03 {
+    margin: 0 -10px;
+  }
+  #table .demo03 tr {
+    display: block;
+    margin-bottom: 10px;
+  }
+  #table .demo03 th {
+    display: block;
+    width: 100%;
+  }
+  #table .demo03 td {
+    display: list-item;
+    width: 90%;
+    margin-left: 10%;
+    border: none;
+  }
+}

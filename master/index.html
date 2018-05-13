@@ -11,30 +11,32 @@
   </head>
   <body>
     <header id="header" class="header">
-      <div class="header-wrapper">
-        <h1>Patterns</h1>
+      <div class="header__wrapper">
+        <h1 class="header__h1-logo"><a href="index.html">Patterns</a></h1>
         <nav id="global-nav" class="global-nav" role="navigation">
           <ul class="global-nav__wrapper clearfix">
-            <li class="global-nav__item active">Styles</li>
-            <li class="global-nav__item">レスポンシブ</li>
-            <li class="global-nav__item">IE対策</li>
+            <li class="global-nav__item"><a href="index.html" class="global-nav__link-btn">Styles</a></li>
+            <li class="global-nav__item"><a href="responsive.html" class="global-nav__link-btn">レスポンシブ</a></li>
+            <li class="global-nav__item"><a href="pugin.html" class="global-nav__link-btn">プラグイン</a></li>
+            <li class="global-nav__item"><a href="ie.html" class="global-nav__link-btn">IE対策</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <div class="contents clearfix">
+      <div class="sub-nav__switch"><=</div>
       <nav id="sub-nav" class="sub-nav " role="navigation">
         <ul class="sub-nav__wrapper">
-          <li class="sub-nav__item"><a href="#colors" class="link-btn">Colors</a></li>
-          <li class="sub-nav__item"><a href="#fonts" class="link-btn">Fonts</a></li>
-          <li class="sub-nav__item"><a href="#header-title" class="link-btn">Header-Title</a></li>
-          <li class="sub-nav__item"><a href="#table" class="link-btn">Table</a></li>
+          <li class="sub-nav__item"><a href="#colors" class="sub-nav__link-btn">Colors</a></li>
+          <li class="sub-nav__item"><a href="#fonts" class="sub-nav__link-btn">Fonts</a></li>
+          <li class="sub-nav__item"><a href="#header-title" class="sub-nav__link-btn">Header-Title</a></li>
+          <li class="sub-nav__item"><a href="#table" class="sub-nav__link-btn">Table</a></li>
         </ul>
       </nav>
 
     	<div id="main" class="main" role="main">
-        <div class="main-wrapper">
+        <div class="main__wrapper">
           <section id="colors" class="section-wrapper">
           	<h2 class="section-title">
           		colors
@@ -93,15 +95,16 @@
           	</h2>
             <div class="section-description">
                 <ul class="section-subwrapper">
+                  <li><h2 class="section-title">H2.header-subtitle</h2></li>
+                  <li><h3 class="section-subtitle">H3.section-title</h3></li>
+                </ul>
+                <ul class="section-subwrapper">
                   <li><h1>H1 Header-Title</h1></li>
                   <li><h2>H2 Header-Title</h2></li>
-                  <li><h2 class="section-title">H2.header-subtitle</h2></li>
-                  <li><h3>H3 Heade-Titler</h3></li>
-                  <li><h3 class="section-subtitle">H3.section-title</h3></li>
+                  <li><h3>H3 Heade-Title</h3></li>
                   <li><h4>H4 Header-Title</h4></li>
                   <li><h5>H5 Header-Title</h5></li>
                   <li><h6>H6 Header-Title</h6></li>
-                  <li></li>
                 </ul>
             </div>
           </section>
@@ -111,22 +114,263 @@
           	<h2 class="section-title">
           		table
           	</h2>
+            <h3 class="section-subtitle">デモ1 2セルの場合の使用した例</h3>
+
+            <div class="section-description">
+
+              <div class="demo2-sample clearfix">
+                <table class="demo01">
+                  <tr>
+                    <th>タイトル</th>
+                    <td>Cascading Style Sheets（CSS、カスケーディング・スタイル・シート、カスケード・スタイル・シート）とは、…省略</td>
+                  </tr>
+                  <tr>
+                    <th>レスポンシブデザイン</th>
+                    <td>表示された機器の種類やサイズに応じて…省略</td>
+                  </tr>
+                </table>
+              </div>
+
+               <pre>
+                 <code>
+  &lt;table class=&quot;demo01&quot;&gt;
+    &lt;tr&gt;
+      &lt;th&gt;CSS&lt;/th&gt;
+      &lt;td&gt;Cascading Style Sheets（CSS、カスケーディング・スタイル・シート、カスケード・スタイル・シート）とは、…省略&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;レスポンシブデザイン&lt;/th&gt;
+      &lt;td&gt;表示された機器の種類やサイズに応じて…省略&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+                </code>
+               </pre>
+
+               <pre>
+                 <code>
+  table { width: 100%; }
+  th, td  { padding: 10px; border: 1px solid #ddd; }
+  th  { background: #f4f4f4; }
+
+  /*----------------------------------------------------
+   .demo01
+  ----------------------------------------------------*/
+  .demo01 th  { width: 30%; text-align: left; }
+
+  @media only screen and (max-width:480px){
+     .demo01 { margin: 0 -10px; }
+     .demo01 th,
+     .demo01 td{
+     width: 100%;
+     display: block;
+     border-top: none;
+     }
+   .demo01 tr:first-child th { border-top: 1px solid #ddd; }
+  }
+                </code>
+               </pre>
+            </div>
+
+            <h3 class="section-subtitle">デモ2 横に長い場合 overflow-x と inline-block を使用した例</h3>
+
+            <div class="demo2-sample clearfix">
+              <table class="demo02">
+                <thead>
+                  <tr>
+                    <th>&nbsp;</th>
+                    <th>CSS</th>
+                    <th>HTML</th>
+                    <th>jQuery</th>
+                    <th>PHP</th>
+                    <th>Illustrator</th>
+                    <th>Photoshop</th>
+                    <th>Fireworks</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>ユニオン太郎</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
             <div class="section-description">
              <pre>
                <code>
-&lt;section id="fonts" class="section-wrapper fonts"&gt;
-&#9;&lt;h2 class="section-title"&gt;
-&#9;&#9;grid
-&#9;&lt;/h2&gt;
-  &lt;div class="section-description"&gt;
-    &lt;div class="fonts-wrapper"&gt;
 
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/section&gt;
+table { width: 100%; }
+th, td  { padding: 10px; border: 1px solid #ddd; }
+th  { background: #f4f4f4; }
+
+/*----------------------------------------------------
+ .demo02
+----------------------------------------------------*/
+table { width: 100%; }
+th, td  { padding: 10px; border: 1px solid #ddd; }
+th  { background: #f4f4f4; }
+.demo02 th  { width: 13%; }
+.demo02 td  { text-align: center; }
+.demo02 td:first-child  { text-align: left; }
+
+@media only screen and (max-width: 800px) {
+ .demo02 {
+   display: block;
+   width: 100%;
+   margin: 0 -10px;
+ }
+ .demo02 thead{
+   display: block;
+   float: left;
+   overflow-x:scroll;
+ }
+ .demo02 tbody{
+   display: block;
+   width: auto;
+   overflow-x: auto;
+   white-space: nowrap;
+ }
+ .demo02 th{
+   display: block;
+   width:auto;
+ }
+ .demo02 tbody tr{
+   display: inline-block;
+   margin: 0 -3px;
+ }
+ .demo02 td{
+   display: block;
+ }
+}
               </code>
              </pre>
+
+              <pre>
+                <code>
+ &lt;table class=&quot;demo02&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;&amp;nbsp;&lt;/th&gt;
+      &lt;th&gt;CSS&lt;/th&gt;
+      &lt;th&gt;HTML&lt;/th&gt;
+      &lt;th&gt;jQuery&lt;/th&gt;
+      &lt;th&gt;PHP&lt;/th&gt;
+      &lt;th&gt;Illustrator&lt;/th&gt;
+      &lt;th&gt;Photoshop&lt;/th&gt;
+      &lt;th&gt;Fireworks&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ユニオン太郎&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+ &lt;/table&gt;
+               </code>
+              </pre>
             </div>
+
+            <h3 class="section-subtitle">デモ3 リスト風にした場合 list-item を使用した例</h3>
+
+            <div class="demo2-sample clearfix">
+              <table class="demo03">
+                <tr>
+                  <th>Webブラウザ</th>
+                  <td>Google Chrome</td>
+                  <td>Safari</td>
+                  <td>Mozilla Firefox</td>
+                  <td>Internet Explorer</td>
+                </tr>
+                <tr>
+                  <th>アドビ製品</th>
+                  <td>Illustrator</td>
+                  <td>Photoshop</td>
+                  <td>Lightroom</td>
+                  <td>Dreamweaver</td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="section-description">
+             <pre>
+               <code>
+table { width: 100%; }
+th, td  { padding: 10px; border: 1px solid #ddd; }
+th  { background: #f4f4f4; }
+
+/*----------------------------------------------------
+ .demo03
+----------------------------------------------------*/
+table { width: 100%; }
+th, td  { padding: 10px; border: 1px solid #ddd; }
+th  { background: #f4f4f4; }
+.demo03 th, .demo03 td  { width: 20%; text-align: left; }
+@media only screen and (max-width: 480px) {
+  .demo03 { margin: 0 -10px; }
+  .demo03 tr {
+    display:block;
+    margin-bottom: 10px;
+  }
+  .demo03 th {
+    display:block;
+    width: 100%;
+  }
+  .demo03 td {
+    display: list-item;
+    width: 90%;
+    margin-left: 10%;
+    border:none;
+  }
+}
+              </code>
+             </pre>
+
+              <pre>
+                <code>
+ &lt;table class=&quot;demo03&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;&amp;nbsp;&lt;/th&gt;
+      &lt;th&gt;CSS&lt;/th&gt;
+      &lt;th&gt;HTML&lt;/th&gt;
+      &lt;th&gt;jQuery&lt;/th&gt;
+      &lt;th&gt;PHP&lt;/th&gt;
+      &lt;th&gt;Illustrator&lt;/th&gt;
+      &lt;th&gt;Photoshop&lt;/th&gt;
+      &lt;th&gt;Fireworks&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ユニオン太郎&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+ &lt;/table&gt;
+               </code>
+              </pre>
+            </div>
+
           </section>
         </div>
     	</div>

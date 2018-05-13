@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8"/>
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<meta name="format-detection" content="telephone=no">
+  	<title>Portfolio</title>
+    <link href="../mincss/plugin.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/solarized_dark.min.css">
+    <link rel="stylesheet" type="text/css" href="../mincss/plugin/slick.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../mincss/plugin/slick-theme.css" media="screen" />
+  </head>
+  <body>
+
+    <ul class="slick-box">
+    	<li><img src="../img/responsive/320_400-1.png" width="" height="" alt=""/></li>
+    	<li><img src="../img/responsive/320_400-2.png" width="" height="" alt=""/></li>
+    	<li><img src="../img/responsive/320_400-3.png" width="" height="" alt=""/></li>
+    </ul>
+
+  	<script src="../minjs/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../minjs/plugin/slick.min.js"></script>
+
+
+    <script type="text/javascript">
+    $(function() {
+    	$('.slick-box').slick({
+        autoplay: true,
+        autoplaySpeed: 1000,
+      });
+    });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+  </body>
+</html>
